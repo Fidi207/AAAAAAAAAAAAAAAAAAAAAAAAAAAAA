@@ -1,0 +1,48 @@
+.hading{
+    font-size: 20px;
+    width: 100%;
+    margin: 0px;
+    animation-name: grdet;
+    animation-duration: .5s;
+    animation-iteration-count: infinite;
+
+}
+@keyframes grdet{
+    from{
+        background: linear-gradient(red, rgb(115, 0, 209), rgb(255, 217, 0));
+    }
+    to{
+        background: linear-gradient(blue, rgb(230, 25, 185), rgb(38, 248, 31));
+    }
+}
+.not{
+    font-size: 15px;
+    color: black;
+}
+
+body{
+    background-size: cover;
+}
+
+.div_speed{
+    float: left;
+}
+
+.div_volum{
+    float: right;
+}
+
+.dabdisks{
+    width: 200px;
+    border-radius: 100px;
+}
+
+#speed_lab, #vol_lab{
+    font-size: 21px;
+    margin: 15px;
+}
+
+canvas{
+    border-radius: 20px;
+    border: 5px ridge blue
+}
