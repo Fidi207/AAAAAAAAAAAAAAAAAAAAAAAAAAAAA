@@ -40,9 +40,24 @@ function getresult(arry) {
 
 function draw() {
     image(video, 0, 0, 600, 500);
-
+    song1Status = song1.isPlaying();
+    song2Status = song2.isPlaying();
     fill(255, 0, 0);
     stroke(255, 0, 0);
+    if(left_score > 0.2){
+        circle(left_x, left_y, 20);
+        song2.stop();
+        if (song1Status == false){
+            song1.play();
+        }
+    }
+    if(right_score > 0.2){
+        circle(right_x, right_y, 20);
+        song1.stop();
+        if (song2Status == false){
+            song2.play();
+        }
+    }
 }
 
 function stop(){
@@ -51,14 +66,7 @@ function stop(){
 }
 
 function play(){
-    if (right_y > left_y) {
-        song1.play();
         song2.stop();
+        song1.play();
         song1.volume(0.7);
     }
-    else{
-        song2.play();
-        song1.stop();
-        song2.volume(0.7);
-    }
-}
